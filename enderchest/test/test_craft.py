@@ -516,8 +516,8 @@ class TestPromptByName:
         script_reader = utils.scripted_prompt(
             (
                 "abra, kadabra, alakazam",
-                "",  # default should be yes here
-            )
+                "",
+            )  # default should be yes here
         )
         monkeypatch.setattr("builtins.input", script_reader)
 

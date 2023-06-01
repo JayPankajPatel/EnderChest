@@ -1,0 +1,1380 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.11, pytest-7.3.1, pluggy-1.0.0
+rootdir: /home/jay/Repos/EnderChest
+plugins: ament-copyright-0.9.8, ament-flake8-0.9.8, ament-lint-0.9.8, launch-testing-0.10.10, ament-pep257-0.9.8, ament-xmllint-0.9.8, launch-testing-ros-0.11.7, cov-4.1.0, anyio-3.6.2
+collected 333 items
+
+test_cli.py .............F......................F...............F....... [ 18%]
+...................F.................F.................F.............    [ 38%]
+test_craft.py ........F..........F...FFF..F                              [ 47%]
+test_gather.py FF.......F................                                [ 55%]
+test_instance.py ......                                                  [ 57%]
+test_place.py ......................FFFF................................ [ 74%]
+FFFFFF....FF..FF....FF....FF..FFFF........FF...                          [ 88%]
+test_sync.py .......................F.............F                      [100%]
+
+=================================== FAILURES ===================================
+_____________ TestCraft.test_root_can_also_env_var_MINECRAFT_ROOT ______________
+
+self = <enderchest.test.test_cli.TestCraft object at 0x7fc1c9490820>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c921a890>
+
+    def test_root_can_also_env_var_MINECRAFT_ROOT(self, monkeypatch):
+        monkeypatch.setenv("MINECRAFT_ROOT", "/mnt/drive/minecraft/EnderChest")
+        _, root, _, _ = cli.parse_args(
+            ["enderchest", *self.action.split(), *self.required_args, "--root", "/home"]
+        )
+>       assert root == Path("/mnt/drive/minecraft/EnderChest")
+E       AssertionError: assert PosixPath('/home') == PosixPath('/mnt/drive/minecraft/EnderChest')
+E        +  where PosixPath('/mnt/drive/minecraft/EnderChest') = Path('/mnt/drive/minecraft/EnderChest')
+
+test_cli.py:87: AssertionError
+__________ TestCraftShulker.test_root_can_also_env_var_MINECRAFT_ROOT __________
+
+self = <enderchest.test.test_cli.TestCraftShulker object at 0x7fc1c9491ab0>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c92a4eb0>
+
+    def test_root_can_also_env_var_MINECRAFT_ROOT(self, monkeypatch):
+        monkeypatch.setenv("MINECRAFT_ROOT", "/mnt/drive/minecraft/EnderChest")
+        _, root, _, _ = cli.parse_args(
+            ["enderchest", *self.action.split(), *self.required_args, "--root", "/home"]
+        )
+>       assert root == Path("/mnt/drive/minecraft/EnderChest")
+E       AssertionError: assert PosixPath('/home') == PosixPath('/mnt/drive/minecraft/EnderChest')
+E        +  where PosixPath('/mnt/drive/minecraft/EnderChest') = Path('/mnt/drive/minecraft/EnderChest')
+
+test_cli.py:87: AssertionError
+_____________ TestPlace.test_root_can_also_env_var_MINECRAFT_ROOT ______________
+
+self = <enderchest.test.test_cli.TestPlace object at 0x7fc1c94c4130>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c92a6ec0>
+
+    def test_root_can_also_env_var_MINECRAFT_ROOT(self, monkeypatch):
+        monkeypatch.setenv("MINECRAFT_ROOT", "/mnt/drive/minecraft/EnderChest")
+        _, root, _, _ = cli.parse_args(
+            ["enderchest", *self.action.split(), *self.required_args, "--root", "/home"]
+        )
+>       assert root == Path("/mnt/drive/minecraft/EnderChest")
+E       AssertionError: assert PosixPath('/home') == PosixPath('/mnt/drive/minecraft/EnderChest')
+E        +  where PosixPath('/mnt/drive/minecraft/EnderChest') = Path('/mnt/drive/minecraft/EnderChest')
+
+test_cli.py:87: AssertionError
+_____________ TestGather.test_root_can_also_env_var_MINECRAFT_ROOT _____________
+
+self = <enderchest.test.test_cli.TestGather object at 0x7fc1c94c4400>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c9258730>
+
+    def test_root_can_also_env_var_MINECRAFT_ROOT(self, monkeypatch):
+        monkeypatch.setenv("MINECRAFT_ROOT", "/mnt/drive/minecraft/EnderChest")
+        _, root, _, _ = cli.parse_args(
+            ["enderchest", *self.action.split(), *self.required_args, "--root", "/home"]
+        )
+>       assert root == Path("/mnt/drive/minecraft/EnderChest")
+E       AssertionError: assert PosixPath('/home') == PosixPath('/mnt/drive/minecraft/EnderChest')
+E        +  where PosixPath('/mnt/drive/minecraft/EnderChest') = Path('/mnt/drive/minecraft/EnderChest')
+
+test_cli.py:87: AssertionError
+__________ TestGatherRemote.test_root_can_also_env_var_MINECRAFT_ROOT __________
+
+self = <enderchest.test.test_cli.TestGatherRemote object at 0x7fc1c94c6920>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c92a5ea0>
+
+    def test_root_can_also_env_var_MINECRAFT_ROOT(self, monkeypatch):
+        monkeypatch.setenv("MINECRAFT_ROOT", "/mnt/drive/minecraft/EnderChest")
+        _, root, _, _ = cli.parse_args(
+            ["enderchest", *self.action.split(), *self.required_args, "--root", "/home"]
+        )
+>       assert root == Path("/mnt/drive/minecraft/EnderChest")
+E       AssertionError: assert PosixPath('/home') == PosixPath('/mnt/drive/minecraft/EnderChest')
+E        +  where PosixPath('/mnt/drive/minecraft/EnderChest') = Path('/mnt/drive/minecraft/EnderChest')
+
+test_cli.py:87: AssertionError
+________ TestShulkerInventory.test_root_can_also_env_var_MINECRAFT_ROOT ________
+
+self = <enderchest.test.test_cli.TestShulkerInventory object at 0x7fc1c94c74f0>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c90f9f90>
+
+    def test_root_can_also_env_var_MINECRAFT_ROOT(self, monkeypatch):
+        monkeypatch.setenv("MINECRAFT_ROOT", "/mnt/drive/minecraft/EnderChest")
+        _, root, _, _ = cli.parse_args(
+            ["enderchest", *self.action.split(), *self.required_args, "--root", "/home"]
+        )
+>       assert root == Path("/mnt/drive/minecraft/EnderChest")
+E       AssertionError: assert PosixPath('/home') == PosixPath('/mnt/drive/minecraft/EnderChest')
+E        +  where PosixPath('/mnt/drive/minecraft/EnderChest') = Path('/mnt/drive/minecraft/EnderChest')
+
+test_cli.py:87: AssertionError
+_____ TestEnderChestCrafting.test_default_behavior_is_to_prevent_overwrite _____
+
+self = <enderchest.test.test_craft.TestEnderChestCrafting object at 0x7fc1c92fd8a0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_default_behavior_is_to_pr0/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c9259960>
+
+    def test_default_behavior_is_to_prevent_overwrite(self, minecraft_root, caplog):
+        create_ender_chest(
+            minecraft_root,
+            EnderChest(
+                "openbagtwo@battlestation" + minecraft_root.absolute().as_posix()
+            ),
+        )
+
+        original_config = fs.ender_chest_config(minecraft_root).read_text()
+
+        craft.craft_ender_chest(
+            minecraft_root, instance_search_paths=(minecraft_root / "instances",)
+        )
+        error_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "ERROR"
+        )
+>       assert "There is already an EnderChest installed" in error_log
+E       AssertionError: assert 'There is already an EnderChest installed' in ''
+
+/home/jay/Repos/EnderChest/enderchest/test/test_craft.py:193: AssertionError
+----------------------------- Captured stderr call -----------------------------
+There is already an EnderChest installed to /tmp/pytest-of-jay/pytest-2/test_default_behavior_is_to_pr0/minecraft
+Aborting
+_ TestShulkerBoxCrafting.test_warns_if_you_forgot_to_add_yourself_as_the_host __
+
+self = <enderchest.test.test_craft.TestShulkerBoxCrafting object at 0x7fc1c92fe470>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c92194b0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_warns_if_you_forgot_to_ad0/minecraft')
+capsys = <_pytest.capture.CaptureFixture object at 0x7fc1c92a4f40>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c9218b80>
+
+    def test_warns_if_you_forgot_to_add_yourself_as_the_host(
+        self, monkeypatch, minecraft_root, capsys, caplog
+    ):
+        utils.pre_populate_enderchest(minecraft_root / "EnderChest")
+        script_reader = utils.scripted_prompt(
+            [
+                "F",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "m",
+                # while we're here we might as well check setting
+                # the other shulker properties
+                "cachedImages, logs",
+                "-12",
+                "somewhere_out_there",
+                "",  # default false
+                "somewhere_out_there,*",
+                "",  # this is the final writeme confirmation
+            ]
+        )
+        monkeypatch.setattr("builtins.input", script_reader)
+
+        shulker_box = craft.specify_shulker_box_from_prompt(minecraft_root, "q and a")
+
+        _ = capsys.readouterr()  # suppress outputs
+
+        assert shulker_box == ShulkerBox(
+            -12,
+            "q and a",
+            minecraft_root / "EnderChest" / "q and a",
+            match_criteria=(
+                ("minecraft", ("*",)),
+                ("modloader", ("*",)),
+                ("tags", ("*",)),
+                ("hosts", ("somewhere_out_there", "*")),
+            ),
+            link_folders=("cachedImages", "logs"),
+        )
+
+        warn_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "WARNING"
+        )
+
+>       assert (
+            "This shulker box will not link to any instances on this machine"
+            in warn_log
+        )
+E       AssertionError: assert 'This shulker box will not link to any instances on this machine' in ''
+
+/home/jay/Repos/EnderChest/enderchest/test/test_craft.py:386: AssertionError
+_____ TestPromptByFilter.test_filter_prompt_lets_you_back_out_of_a_mistake _____
+
+self = <enderchest.test.test_craft.TestPromptByFilter object at 0x7fc1c92feef0>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c919af50>
+capsys = <_pytest.capture.CaptureFixture object at 0x7fc1c919a830>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c919b3a0>
+
+      def test_filter_prompt_lets_you_back_out_of_a_mistake(
+          self, monkeypatch, capsys, caplog
+      ):
+          script_reader = utils.scripted_prompt(
+              (
+                  "1.19.5",
+                  "",  # default is no
+                  "1.19",
+                  "",  # default is yes
+                  "N,B,Q",
+                  "",
+                  "vanilla*",
+                  "",
+              )
+          )
+
+          monkeypatch.setattr("builtins.input", script_reader)
+
+          shulker_box = craft._prompt_for_filters(
+              ShulkerBox(0, "tester", Path("ignored"), (), ()), utils.TESTING_INSTANCES
+          )
+
+          _ = capsys.readouterr()
+
+          assert shulker_box.match_criteria == (
+              ("minecraft", ("1.19",)),
+              ("modloader", ("None", "Fabric Loader", "Quilt Loader")),
+              ("tags", ("vanilla*",)),
+          )
+
+          # check that it was showing the right instances right up until the end
+>         assert caplog.records[-1].msg == (
+              """Filters match the instances:
+    - official
+    - Chest Boat"""
+          )
+E         IndexError: list index out of range
+
+/home/jay/Repos/EnderChest/enderchest/test/test_craft.py:503: IndexError
+__________________ TestPromptByName.test_confirms_selections ___________________
+
+self = <enderchest.test.test_craft.TestPromptByName object at 0x7fc1c92ff280>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c92186d0>
+capsys = <_pytest.capture.CaptureFixture object at 0x7fc1c921b670>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c9219480>
+
+      def test_confirms_selections(self, monkeypatch, capsys, caplog):
+          script_reader = utils.scripted_prompt(
+              (
+                  "abra, kadabra, alakazam",
+                  "",  # default should be yes here
+              )
+          )
+          monkeypatch.setattr("builtins.input", script_reader)
+
+          shulker_box = craft._prompt_for_instance_names(
+              ShulkerBox(0, "tester", Path("ignored"), (), ())
+          )
+
+          _ = capsys.readouterr()
+
+          assert shulker_box.match_criteria == (
+              ("instances", ("abra", "kadabra", "alakazam")),
+          )
+
+>         assert caplog.records[-1].msg == (
+              """You specified the following instances:
+    - abra
+    - kadabra
+    - alakazam"""
+          )
+E         IndexError: list index out of range
+
+/home/jay/Repos/EnderChest/enderchest/test/test_craft.py:534: IndexError
+____ TestPromptByName.test_default_for_confirmation_is_no_if_empty_response ____
+
+self = <enderchest.test.test_craft.TestPromptByName object at 0x7fc1c92ff2e0>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c919a110>
+capsys = <_pytest.capture.CaptureFixture object at 0x7fc1c919a7a0>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c919b280>
+
+    def test_default_for_confirmation_is_no_if_empty_response(
+        self,
+        monkeypatch,
+        capsys,
+        caplog,
+    ):
+        script_reader = utils.scripted_prompt(
+            (
+                "",
+                "",
+                "",
+                "yes",
+            )
+        )
+        monkeypatch.setattr("builtins.input", script_reader)
+
+        shulker_box = craft._prompt_for_instance_names(
+            ShulkerBox(0, "tester", Path("ignored"), (), ())
+        )
+
+        _ = capsys.readouterr()
+
+        assert shulker_box.match_criteria == (("instances", ("*",)),)
+
+>       assert (
+            "This shulker box will be applied to all instances"
+            in caplog.records[-1].msg
+        )
+E       IndexError: list index out of range
+
+/home/jay/Repos/EnderChest/enderchest/test/test_craft.py:569: IndexError
+__ TestPromptByNumber.test_invalid_selection_reminds_you_of_the_instance_list __
+
+self = <enderchest.test.test_craft.TestPromptByNumber object at 0x7fc1c92ff820>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x7fc1c921aa70>
+capsys = <_pytest.capture.CaptureFixture object at 0x7fc1c921a470>
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c921b4f0>
+
+        def test_invalid_selection_reminds_you_of_the_instance_list(
+            self, monkeypatch, capsys, caplog
+        ):
+            script_reader = utils.scripted_prompt(
+                (
+                    "7",
+                    "1, 3",
+                    "",
+                )
+            )
+            monkeypatch.setattr("builtins.input", script_reader)
+
+            def get_instances():
+                logging.info(
+                    """These are the instances that are currently registered:
+      1. official (~/.minecraft)
+      2. axolotl (instances/axolotl/.minecraft)
+      3. bee (instances/bee/.minecraft)
+      4. Chest Boat (instances/chest-boat/.minecraft)"""
+                )
+                return utils.TESTING_INSTANCES
+
+            shulker_box = craft._prompt_for_instance_numbers(
+                ShulkerBox(0, "tester", Path("ignored"), (), ()),
+                get_instances(),
+                get_instances,
+            )
+
+            _ = capsys.readouterr()
+
+>           assert """Invalid selection: 7 is out of range
+
+    These are the instances that are currently registered:
+      1. official (~/.minecraft)
+      2. axolotl (instances/axolotl/.minecraft)
+      3. bee (instances/bee/.minecraft)
+      4. Chest Boat (instances/chest-boat/.minecraft)""" in "\n".join(
+                record.msg for record in caplog.records
+            )
+E           AssertionError: assert 'Invalid selection: 7 is out of range\n\nThese are the instances that are currently registered:\n  1. official (~/.min...(instances/axolotl/.minecraft)\n  3. bee (instances/bee/.minecraft)\n  4. Chest Boat (instances/chest-boat/.minecraft)' in 'These are the instances that are currently registered:\n  1. official (~/.minecraft)\n  2. axolotl (instances/axolotl...(instances/axolotl/.minecraft)\n  3. bee (instances/bee/.minecraft)\n  4. Chest Boat (instances/chest-boat/.minecraft)'
+E            +  where 'These are the instances that are currently registered:\n  1. official (~/.minecraft)\n  2. axolotl (instances/axolotl...(instances/axolotl/.minecraft)\n  3. bee (instances/bee/.minecraft)\n  4. Chest Boat (instances/chest-boat/.minecraft)' = <built-in method join of str object at 0x7fc1cb8f7df0>(<generator object TestPromptByNumber.test_invalid_selection_reminds_you_of_the_instance_list.<locals>.<genexpr> at 0x7fc1c91d0200>)
+E            +    where <built-in method join of str object at 0x7fc1cb8f7df0> = '\n'.join
+
+/home/jay/Repos/EnderChest/enderchest/test/test_craft.py:671: AssertionError
+------------------------------ Captured log call -------------------------------
+INFO     root:test_craft.py:654 These are the instances that are currently registered:
+  1. official (~/.minecraft)
+  2. axolotl (instances/axolotl/.minecraft)
+  3. bee (instances/bee/.minecraft)
+  4. Chest Boat (instances/chest-boat/.minecraft)
+INFO     root:test_craft.py:654 These are the instances that are currently registered:
+  1. official (~/.minecraft)
+  2. axolotl (instances/axolotl/.minecraft)
+  3. bee (instances/bee/.minecraft)
+  4. Chest Boat (instances/chest-boat/.minecraft)
+____ TestListShulkerBoxes.test_list_shulker_box_reports_the_boxes_in_order _____
+
+self = <enderchest.test.test_gather.TestListShulkerBoxes object at 0x7fc1c92ffd60>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_list_shulker_box_reports_0/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91996c0>
+
+      def test_list_shulker_box_reports_the_boxes_in_order(self, minecraft_root, caplog):
+          _ = gather.load_shulker_boxes(minecraft_root)
+>         assert (
+              """0. global
+    1. 1.19
+    2. vanilla
+    3. optifine"""
+              in caplog.records[-1].msg
+          )
+E         IndexError: list index out of range
+
+/home/jay/Repos/EnderChest/enderchest/test/test_gather.py:29: IndexError
+----------------------------- Captured stderr call -----------------------------
+Could not parse /tmp/pytest-of-jay/pytest-2/test_list_shulker_box_reports_0/minecraft/EnderChest/not_ini/shulkerbox.cfg
+  Skipping shulker box not_ini
+_____ TestListShulkerBoxes.test_list_shulker_box_warns_if_theres_a_bad_box _____
+
+self = <enderchest.test.test_gather.TestListShulkerBoxes object at 0x7fc1c92ffdc0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_list_shulker_box_warns_if0/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c94c4dc0>
+
+    def test_list_shulker_box_warns_if_theres_a_bad_box(self, minecraft_root, caplog):
+        _ = gather.load_shulker_boxes(minecraft_root)
+
+        warnings = [
+            record for record in caplog.records if record.levelname == "WARNING"
+        ]
+
+>       assert re.search(
+            rf"Could not parse(.*)not_ini(.*){fs.SHULKER_BOX_CONFIG_NAME}",
+            warnings[-1].msg,
+        )
+E       IndexError: list index out of range
+
+/home/jay/Repos/EnderChest/enderchest/test/test_gather.py:44: IndexError
+----------------------------- Captured stderr call -----------------------------
+Could not parse /tmp/pytest-of-jay/pytest-2/test_list_shulker_box_warns_if0/minecraft/EnderChest/not_ini/shulkerbox.cfg
+  Skipping shulker box not_ini
+_ TestGatherInstances.test_instance_search_warns_if_no_instances_can_be_found __
+
+self = <enderchest.test.test_gather.TestGatherInstances object at 0x7fc1c9484be0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_instance_search_warns_if_0/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c9199510>
+
+    def test_instance_search_warns_if_no_instances_can_be_found(
+        self, minecraft_root, caplog
+    ):
+        empty_folder = minecraft_root / "nothing in there"
+        empty_folder.mkdir()
+        instances = gather.gather_minecraft_instances(
+            minecraft_root, empty_folder, official=None
+        )
+
+        assert len(instances) == 0
+
+        warn_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "WARNING"
+        )
+
+>       assert "Could not find any Minecraft instances" in warn_log
+E       AssertionError: assert 'Could not find any Minecraft instances' in ''
+
+/home/jay/Repos/EnderChest/enderchest/test/test_gather.py:152: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Could not find any Minecraft instances inside /tmp/pytest-of-jay/pytest-2/test_instance_search_warns_if_0/minecraft/nothing in there
+_ TestSingleShulkerPlace.test_place_will_not_overwrite_a_non_empty_folder[official] _
+
+self = <enderchest.test.test_place.TestSingleShulkerPlace object at 0x7fc1c933df00>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_place_will_not_overwrite_0/minecraft')
+instance = InstanceSpec(name='official', root=PosixPath('~/.minecraft'), minecraft_versions=('1.19.4', '1.20-pre1', '23w13a_or_b', '1.16.5-forge-36.2.39'), modloader=None, tags=('vanilla', 'latest-release', 'latest-snapshot'))
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c90f9510>
+
+    @utils.parametrize_over_instances("official", "axolotl")
+    def test_place_will_not_overwrite_a_non_empty_folder(
+        self, minecraft_root, instance, caplog
+    ):
+        instance_folder = utils.resolve(instance.root, minecraft_root)
+        existing_file = instance_folder / "screenshots" / "thumbs.db"
+        existing_file.write_text("opposable")
+
+        place.place_ender_chest(minecraft_root)
+
+        error_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "ERROR"
+        )
+>       assert re.search(
+            rf"{instance.name}((.|\n)*)screenshots((.|\n)*)empty", error_log
+        )
+E       AssertionError: assert None
+E        +  where None = <function search at 0x7fc1cb6d5750>('official((.|\\n)*)screenshots((.|\\n)*)empty', '')
+E        +    where <function search at 0x7fc1cb6d5750> = re.search
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:210: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box global to instance official:
+  ~/.minecraft/screenshots is a non-empty directory
+Aborting
+_ TestSingleShulkerPlace.test_place_will_not_overwrite_a_non_empty_folder[axolotl] _
+
+self = <enderchest.test.test_place.TestSingleShulkerPlace object at 0x7fc1c933df30>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_place_will_not_overwrite_1/minecraft')
+instance = InstanceSpec(name='axolotl', root=PosixPath('instances/axolotl/.minecraft'), minecraft_versions=('1.17.1',), modloader='', tags=('vanilla',))
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91906d0>
+
+    @utils.parametrize_over_instances("official", "axolotl")
+    def test_place_will_not_overwrite_a_non_empty_folder(
+        self, minecraft_root, instance, caplog
+    ):
+        instance_folder = utils.resolve(instance.root, minecraft_root)
+        existing_file = instance_folder / "screenshots" / "thumbs.db"
+        existing_file.write_text("opposable")
+
+        place.place_ender_chest(minecraft_root)
+
+        error_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "ERROR"
+        )
+>       assert re.search(
+            rf"{instance.name}((.|\n)*)screenshots((.|\n)*)empty", error_log
+        )
+E       AssertionError: assert None
+E        +  where None = <function search at 0x7fc1cb6d5750>('axolotl((.|\\n)*)screenshots((.|\\n)*)empty', '')
+E        +    where <function search at 0x7fc1cb6d5750> = re.search
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:210: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box global to instance axolotl:
+  instances/axolotl/.minecraft/screenshots is a non-empty directory
+Aborting
+____ TestSingleShulkerPlace.test_place_will_not_overwrite_a_file[official] _____
+
+self = <enderchest.test.test_place.TestSingleShulkerPlace object at 0x7fc1c933cd30>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_place_will_not_overwrite_2/minecraft')
+instance = InstanceSpec(name='official', root=PosixPath('~/.minecraft'), minecraft_versions=('1.19.4', '1.20-pre1', '23w13a_or_b', '1.16.5-forge-36.2.39'), modloader=None, tags=('vanilla', 'latest-release', 'latest-snapshot'))
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c92a4b20>
+
+    @utils.parametrize_over_instances("official", "axolotl")
+    def test_place_will_not_overwrite_a_file(self, minecraft_root, instance, caplog):
+        instance_folder = utils.resolve(instance.root, minecraft_root)
+        existing_file = instance_folder / "usercache.json"
+        existing_file.write_text("isaacs\n")
+
+        place.place_ender_chest(minecraft_root)
+
+        error_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "ERROR"
+        )
+>       assert re.search(
+            rf"{instance.name}((.|\n)*)usercache.json((.|\n)*)exists", error_log
+        )
+E       AssertionError: assert None
+E        +  where None = <function search at 0x7fc1cb6d5750>('official((.|\\n)*)usercache.json((.|\\n)*)exists', '')
+E        +    where <function search at 0x7fc1cb6d5750> = re.search
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:230: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box global to instance official:
+  ~/.minecraft/usercache.json already exists
+Aborting
+_____ TestSingleShulkerPlace.test_place_will_not_overwrite_a_file[axolotl] _____
+
+self = <enderchest.test.test_place.TestSingleShulkerPlace object at 0x7fc1c933c9a0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_place_will_not_overwrite_3/minecraft')
+instance = InstanceSpec(name='axolotl', root=PosixPath('instances/axolotl/.minecraft'), minecraft_versions=('1.17.1',), modloader='', tags=('vanilla',))
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c92a4430>
+
+    @utils.parametrize_over_instances("official", "axolotl")
+    def test_place_will_not_overwrite_a_file(self, minecraft_root, instance, caplog):
+        instance_folder = utils.resolve(instance.root, minecraft_root)
+        existing_file = instance_folder / "usercache.json"
+        existing_file.write_text("isaacs\n")
+
+        place.place_ender_chest(minecraft_root)
+
+        error_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "ERROR"
+        )
+>       assert re.search(
+            rf"{instance.name}((.|\n)*)usercache.json((.|\n)*)exists", error_log
+        )
+E       AssertionError: assert None
+E        +  where None = <function search at 0x7fc1cb6d5750>('axolotl((.|\\n)*)usercache.json((.|\\n)*)exists', '')
+E        +    where <function search at 0x7fc1cb6d5750> = re.search
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:230: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box global to instance axolotl:
+  instances/axolotl/.minecraft/usercache.json already exists
+Aborting
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[global-~-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9368cd0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre0/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91eece0>
+shulker_box = 'global', instance = '~', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('~/.minecraft to global' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[global-~-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9368d60>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre1/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c925a3b0>
+shulker_box = 'global', instance = '~', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('~/.minecraft to global' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[1.19-~-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9368df0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre2/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c9198d60>
+shulker_box = '1.19', instance = '~', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('~/.minecraft to 1.19' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[1.19-~-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9368e80>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre3/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91ee350>
+shulker_box = '1.19', instance = '~', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('~/.minecraft to 1.19' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[vanilla-~-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9368f10>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre4/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c925b4f0>
+shulker_box = 'vanilla', instance = '~', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('~/.minecraft to vanilla' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[vanilla-~-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c93689a0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre5/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c90fb550>
+shulker_box = 'vanilla', instance = '~', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('~/.minecraft to vanilla' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[global-axolotl-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369360>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre10/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91ed4b0>
+shulker_box = 'global', instance = 'axolotl', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('axolotl/.minecraft to global' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[global-axolotl-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c93693f0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre11/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c919b7f0>
+shulker_box = 'global', instance = 'axolotl', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('axolotl/.minecraft to global' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[vanilla-axolotl-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c93695a0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre14/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91ee3e0>
+shulker_box = 'vanilla', instance = 'axolotl', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('axolotl/.minecraft to vanilla' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[vanilla-axolotl-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369630>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre15/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c93b1990>
+shulker_box = 'vanilla', instance = 'axolotl', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('axolotl/.minecraft to vanilla' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[global-bee-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369900>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre20/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c9218e50>
+shulker_box = 'global', instance = 'bee', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('bee/.minecraft to global' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[global-bee-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369990>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre21/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c919ab00>
+shulker_box = 'global', instance = 'bee', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('bee/.minecraft to global' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[optifine-bee-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369c60>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre26/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c925b730>
+shulker_box = 'optifine', instance = 'bee', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('bee/.minecraft to optifine' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[optifine-bee-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369cf0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre27/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c9198a30>
+shulker_box = 'optifine', instance = 'bee', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('bee/.minecraft to optifine' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[global-chest-boat-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369ea0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre30/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c902da80>
+shulker_box = 'global', instance = 'chest-boat', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('chest-boat/.minecraft to global' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[global-chest-boat-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369f30>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre31/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91ef700>
+shulker_box = 'global', instance = 'chest-boat', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('chest-boat/.minecraft to global' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[1.19-chest-boat-True-ignore] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c9369fc0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre32/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91904c0>
+shulker_box = '1.19', instance = 'chest-boat', should_match = True
+error_handling = 'ignore'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('chest-boat/.minecraft to 1.19' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+_ TestMultiShulkerPlacing.test_multi_shulker_place_correctly_identifies_matches[1.19-chest-boat-True-skip] _
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c936a050>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_multi_shulker_place_corre33/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c902fa00>
+shulker_box = '1.19', instance = 'chest-boat', should_match = True
+error_handling = 'skip'
+
+    @pytest.mark.parametrize("error_handling", ("ignore", "skip"))
+    @pytest.mark.parametrize(
+        "shulker_box, instance, should_match", utils.TESTING_SHULKER_INSTANCE_MATCHES
+    )
+    def test_multi_shulker_place_correctly_identifies_matches(
+        self,
+        minecraft_root,
+        caplog,
+        shulker_box,
+        instance,
+        should_match,
+        error_handling,
+    ):
+        place.place_ender_chest(minecraft_root, error_handling=error_handling)
+
+        link_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "INFO"
+        )
+
+>       assert (
+            f'{os.path.join(instance, ".minecraft")} to {shulker_box}' in link_log
+        ) is should_match
+E       AssertionError: assert ('chest-boat/.minecraft to 1.19' in '') is True
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:531: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+___ TestMultiShulkerPlacing.test_default_behavior_is_to_stop_at_first_error ____
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c936a6e0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_default_behavior_is_to_st0/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c91efaf0>
+
+    def test_default_behavior_is_to_stop_at_first_error(self, minecraft_root, caplog):
+        place.place_ender_chest(minecraft_root)
+
+        assert not (
+            minecraft_root
+            / "instances"
+            / "chest_boat"
+            / ".minecraft"
+            / "mods"
+            / "FoxNap.jar"
+        ).exists()
+
+        error_log = "\n".join(
+            record.msg for record in caplog.records if record.levelname == "ERROR"
+        )
+
+>       assert error_log.endswith(
+            f'{os.path.join("~", ".minecraft", "options.txt")}'  # fricking escape chars
+            + " already exists\nAborting"
+        )
+E       AssertionError: assert False
+E        +  where False = <built-in method endswith of str object at 0x7fc1cb81c030>(('~/.minecraft/options.txt' + ' already exists\nAborting'))
+E        +    where <built-in method endswith of str object at 0x7fc1cb81c030> = ''.endswith
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:566: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Aborting
+___________________ TestMultiShulkerPlacing.test_skip_match ____________________
+
+self = <enderchest.test.test_place.TestMultiShulkerPlacing object at 0x7fc1c936a860>
+home = PosixPath('/tmp/pytest-of-jay/pytest-2/test_skip_match0/home')
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_skip_match0/minecraft')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c902ea40>
+
+    def test_skip_match(self, home, minecraft_root, caplog):
+        place.place_ender_chest(minecraft_root, error_handling="skip")
+
+        errors = [
+            i for i, record in enumerate(caplog.records) if record.levelname == "ERROR"
+        ]
+        # meta-tests that I found the right line
+>       assert len(errors) == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+/home/jay/Repos/EnderChest/enderchest/test/test_place.py:578: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Error linking shulker box 1.19 to instance official:
+  ~/.minecraft/options.txt already exists
+Skipping the rest of this match
+_____________ TestFileSync.test_close_will_attempt_to_push_to_all ______________
+
+self = <enderchest.test.test_sync.TestFileSync object at 0x7fc1c93900a0>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_close_will_attempt_to_pus0/minecraft')
+remote = ParseResult(scheme='file', netloc='jay@laptop-1u0v10od', path='/tmp/pytest-of-jay/pytest-2/test_close_will_attempt_to_pus0/not%20so%20remote', params='', query='', fragment='')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c902cdf0>
+
+    def test_close_will_attempt_to_push_to_all(self, minecraft_root, remote, caplog):
+        gather.update_ender_chest(
+            minecraft_root, remotes=(remote, "prayer://unreachable")
+        )
+        r.sync_with_remotes(minecraft_root, "push")
+        warnings = [
+            record.msg for record in caplog.records if record.levelname == "WARNING"
+        ]
+
+>       assert len(warnings) == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+/home/jay/Repos/EnderChest/enderchest/test/test_sync.py:330: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Could not sync changes with prayer://unreachable:
+  Protocol prayer is not currently implemented
+_____________ TestRsyncSync.test_close_will_attempt_to_push_to_all _____________
+
+self = <enderchest.test.test_sync.TestRsyncSync object at 0x7fc1c93b0460>
+minecraft_root = PosixPath('/tmp/pytest-of-jay/pytest-2/test_close_will_attempt_to_pus1/minecraft')
+remote = ParseResult(scheme='rsync', netloc='jay@laptop-1u0v10od', path='/tmp/pytest-of-jay/pytest-2/test_close_will_attempt_to_pus1/not%20so%20remote', params='', query='', fragment='')
+caplog = <_pytest.logging.LogCaptureFixture object at 0x7fc1c90fa290>
+
+    def test_close_will_attempt_to_push_to_all(self, minecraft_root, remote, caplog):
+        gather.update_ender_chest(
+            minecraft_root, remotes=(remote, "prayer://unreachable")
+        )
+        r.sync_with_remotes(minecraft_root, "push")
+        warnings = [
+            record.msg for record in caplog.records if record.levelname == "WARNING"
+        ]
+
+>       assert len(warnings) == 1
+E       assert 0 == 1
+E        +  where 0 = len([])
+
+/home/jay/Repos/EnderChest/enderchest/test/test_sync.py:330: AssertionError
+----------------------------- Captured stderr call -----------------------------
+Could not sync changes with prayer://unreachable:
+  Protocol prayer is not currently implemented
+=========================== short test summary info ============================
+FAILED test_cli.py::TestCraft::test_root_can_also_env_var_MINECRAFT_ROOT - As...
+FAILED test_cli.py::TestCraftShulker::test_root_can_also_env_var_MINECRAFT_ROOT
+FAILED test_cli.py::TestPlace::test_root_can_also_env_var_MINECRAFT_ROOT - As...
+FAILED test_cli.py::TestGather::test_root_can_also_env_var_MINECRAFT_ROOT - A...
+FAILED test_cli.py::TestGatherRemote::test_root_can_also_env_var_MINECRAFT_ROOT
+FAILED test_cli.py::TestShulkerInventory::test_root_can_also_env_var_MINECRAFT_ROOT
+FAILED test_craft.py::TestEnderChestCrafting::test_default_behavior_is_to_prevent_overwrite
+FAILED test_craft.py::TestShulkerBoxCrafting::test_warns_if_you_forgot_to_add_yourself_as_the_host
+FAILED test_craft.py::TestPromptByFilter::test_filter_prompt_lets_you_back_out_of_a_mistake
+FAILED test_craft.py::TestPromptByName::test_confirms_selections - IndexError...
+FAILED test_craft.py::TestPromptByName::test_default_for_confirmation_is_no_if_empty_response
+FAILED test_craft.py::TestPromptByNumber::test_invalid_selection_reminds_you_of_the_instance_list
+FAILED test_gather.py::TestListShulkerBoxes::test_list_shulker_box_reports_the_boxes_in_order
+FAILED test_gather.py::TestListShulkerBoxes::test_list_shulker_box_warns_if_theres_a_bad_box
+FAILED test_gather.py::TestGatherInstances::test_instance_search_warns_if_no_instances_can_be_found
+FAILED test_place.py::TestSingleShulkerPlace::test_place_will_not_overwrite_a_non_empty_folder[official]
+FAILED test_place.py::TestSingleShulkerPlace::test_place_will_not_overwrite_a_non_empty_folder[axolotl]
+FAILED test_place.py::TestSingleShulkerPlace::test_place_will_not_overwrite_a_file[official]
+FAILED test_place.py::TestSingleShulkerPlace::test_place_will_not_overwrite_a_file[axolotl]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[global-~-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[global-~-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[1.19-~-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[1.19-~-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[vanilla-~-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[vanilla-~-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[global-axolotl-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[global-axolotl-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[vanilla-axolotl-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[vanilla-axolotl-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[global-bee-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[global-bee-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[optifine-bee-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[optifine-bee-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[global-chest-boat-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[global-chest-boat-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[1.19-chest-boat-True-ignore]
+FAILED test_place.py::TestMultiShulkerPlacing::test_multi_shulker_place_correctly_identifies_matches[1.19-chest-boat-True-skip]
+FAILED test_place.py::TestMultiShulkerPlacing::test_default_behavior_is_to_stop_at_first_error
+FAILED test_place.py::TestMultiShulkerPlacing::test_skip_match - assert 0 == 1
+FAILED test_sync.py::TestFileSync::test_close_will_attempt_to_push_to_all - a...
+FAILED test_sync.py::TestRsyncSync::test_close_will_attempt_to_push_to_all - ...
+======================= 41 failed, 292 passed in 20.27s ========================

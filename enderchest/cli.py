@@ -539,9 +539,11 @@ def parse_args(argv: Sequence[str]) -> tuple[Action, Path, int, dict[str, Any]]:
             if log_level == logging.NOTSET:  # that's 0, annoyingly enough
                 log_level -= 1
 
+            MINECRAFT_ROOT = os.getenv("MINECRAFT_ROOT")
+
             return (
                 actions[aliases[command]],
-                Path(root_arg or root_flag or os.getcwd()),
+                Path(root_arg or root_flag or MINECRAFT_ROOT or os.getcwd()),
                 log_level,
                 action_kwargs,
             )
